@@ -9,5 +9,12 @@ class Git:
 	def status(self):
 		print self.run_process(['status'])	
 
+	def add(self, file_names = []):
+		if file_names == []:
+			file_names = ['.']
+		self.run_process(['add'] + file_names)
+
 git = Git()
-git.status()
+#git.status()
+git.add(['Git.py'])
+
