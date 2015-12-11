@@ -13,3 +13,11 @@ endfunction
 function! Git_commit(message)
 	python git.commit(vim.eval("a:message"))
 endfunction
+
+function! Git_pull(...)
+	if a:0
+		python 		git.pull(vim.eval("a:1"))
+	else
+		python 		git.pull()
+	endif
+endfunction

@@ -17,4 +17,11 @@ class Git:
 
 	def commit(self, message):
 		print self.run_process(['commit'] + ['-m', message ] )
-		
+
+	def pull(self, branch = None):
+		parameter = ['pull']
+		if branch:
+			parameter = parameter + [ 'origin', branch ]
+
+		print self.run_process(parameter);
+	
