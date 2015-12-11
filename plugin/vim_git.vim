@@ -1,4 +1,5 @@
-python import Git,vim
+python import Git
+python import vim
 python git = Git.Git()
 
 function! Git_status()
@@ -6,7 +7,7 @@ function! Git_status()
 endfunction
 
 function! Git_add()
-	python git.add()
+	python git.add([vim.current.buffer.name])
 endfunction
 
 function! Git_commit(message)
