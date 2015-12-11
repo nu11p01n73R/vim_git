@@ -34,7 +34,7 @@ export PYTHONPATH=${PYTHONPATH}:~/.vim/bundle/vim_git/plugin
 :GitStatus
 ```
 
-- To add all files
+- To add the current file. 
 ```
 :GitAdd
 ```
