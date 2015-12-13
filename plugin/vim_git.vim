@@ -21,3 +21,8 @@ function! Git_pull(...)
 		python 		git.pull()
 	endif
 endfunction
+
+function! Git_push(branch)
+	python git.push(vim.eval('a:branch')
+endfunction
+

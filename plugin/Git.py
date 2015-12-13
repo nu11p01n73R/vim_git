@@ -24,4 +24,7 @@ class Git:
 			parameter = parameter + [ 'origin', branch ]
 
 		print self.run_process(parameter);
-	
+
+	def push(self, branch):
+		parameter = [ 'push', 'origin', branch ]
+		print self.run_process(parameter)
