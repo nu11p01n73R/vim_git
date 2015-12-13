@@ -19,6 +19,8 @@ If you wish to add custom commands to call the functions, then add these lines t
 command GitStatus call Git_status()
 command GitAdd call Git_add()
 command -nargs=1 GitCommit call Git_commit(<f-args>)
+command -nargs=* GitPull call Git_pull(<f-args>)
+command -nargs=1 GitPush call Git_push(<f-args>)
 ```
 
 Also, add the `plugins` folder to your `PYTHONPATH`
@@ -43,3 +45,20 @@ export PYTHONPATH=${PYTHONPATH}:~/.vim/bundle/vim_git/plugin
 ```
 :GitCommit "Some commit message"
 ```
+
+- To pull the current origin branch
+```
+:GitPull
+```
+
+- To pull any origin branch
+```
+:GitPull master
+```
+  This will pull the origin master to the current branch
+  
+- To push changes to origin
+```
+:GitPush master
+```
+
