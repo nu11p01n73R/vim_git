@@ -7,7 +7,7 @@ function! Git_status()
 endfunction
 
 function! Git_add()
-	python git.add([vim.current.buffer.name])
+	python git.add()
 endfunction
 
 function! Git_commit(message)
